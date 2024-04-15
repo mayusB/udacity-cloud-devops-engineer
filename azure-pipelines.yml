@@ -1,6 +1,10 @@
 variables:
 - group: Semgrep_Variables
 
+pool:
+ name: default
+ vmImage: mayowa-HP-ProBook-450-G3
+
 steps:
 - checkout: self
   clean: true
