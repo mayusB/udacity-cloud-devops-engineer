@@ -9,11 +9,11 @@ jobs:
         pip install semgrep
         if [ $(Build.SourceBranchName) = "master" ]; then
             echo "Semgrep full scan"
-            semgrep ci
+            semgrep scan
         elif [ $(System.PullRequest.PullRequestId) -ge 0 ]; then
             echo "Semgrep diff scan"
             export SEMGREP_PR_ID=$(System.PullRequest.PullRequestId)
             export SEMGREP_BASELINE_REF='origin/master'
             git fetch origin master:origin/master
-            semgrep ci 
+            semgrep scan
         fi
