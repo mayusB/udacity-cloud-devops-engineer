@@ -1,6 +1,9 @@
 variables:
 - group: Semgrep_Variables
-
+pool:
+ name: default
+ vmImage: winagent
+ 
 steps:
 - checkout: self
   clean: true
