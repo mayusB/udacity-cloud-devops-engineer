@@ -1,14 +1,6 @@
 variables:
 - group: Semgrep_Mayowa
 
-resources:
-  repositories: 
-    - repository: udacity-cloud-devops-engineer
-      type: github
-      name: mayusb/udacity-cloud-devops-engineer
-      ref: refs/heads/main
-      # ref: ${{ variables['Build.SourceBranch'] }}
-      endpoint: mayub # Please change the name of service connection here. More details can be found in additonal information below.
 jobs:
 - job: Semgrep_Scan
   steps:
