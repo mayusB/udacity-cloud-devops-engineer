@@ -3,7 +3,7 @@ variables:
 
 pool:
  name: default
- vmImage: mayowa-HP-ProBook-450-G3
+ vmImage: winagent
 
 steps:
 - checkout: self
